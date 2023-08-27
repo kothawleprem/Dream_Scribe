@@ -8,6 +8,7 @@ import Verify from './Screens/Onboading/Verify';
 import Input from './Pages/Input/Input';
 import Options from './Pages/Options/Options';
 import Poem from './Pages/Poem/Poem';
+import Analyze from './Pages/Analyze/Analyze';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
                 <Route exact path="/input" element={<Input/>}></Route>
                 <Route exact path="/options" element={<Options/>}></Route>
                 <Route exact path="/poem" element={<Poem/>}></Route>
+                <Route exact path='/analyze' element={<Analyze/>}></Route>
         </Routes>
     
 

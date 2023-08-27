@@ -31,6 +31,18 @@ const Options = () => {
         >
           Poem
         </Button>
+        <Button
+          variant="outline-primary"
+          onClick={() =>
+            navigate("/analyze", {
+              state: {
+                dreamDescription: state.dreamDescription,
+              },
+            })
+          }
+        >
+          Analyze
+        </Button>
       </center>
     </Container>
   );
