@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 // import Image from "next/image"
 import { Disclosure } from "@headlessui/react";
 
-const NavbarComan = () => {
+const Nav = () => {
   const navigation = [
     "My Dreams",
    
@@ -53,16 +53,16 @@ const NavbarComan = () => {
             ))}
           </ul>
         </div> */}
-
+{/* 
         <div className="hidden mr-3 space-x-4 lg:flex nav__item">
           <Link to="/mydream" className="px-6 font-bold py-2  text-gray-600 no-underline rounded-md md:ml-5 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none">
        My Dreams
           </Link>
 
-        </div>
+        </div> */}
       </nav>
     </div>
   );
 }
 
-export default NavbarComan;
+export default Nav;

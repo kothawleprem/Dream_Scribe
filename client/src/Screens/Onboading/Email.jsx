@@ -12,6 +12,7 @@ import './Email.css';
 
 import axios from "axios";
 import NavbarComan from "../../Component/NavbarComan";
+import Nav from "../../Component/Nav";
 
 const Email = () => {
   const [email, setEmail] = useState("");
@@ -78,7 +79,7 @@ const Email = () => {
     <>
     {/* <center>    */}
      <div> 
-      <NavbarComan/>
+      <Nav/>
       <Container>
         <br />
         <br />
