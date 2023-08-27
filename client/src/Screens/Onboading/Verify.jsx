@@ -63,7 +63,7 @@ const Verify = () => {
 
       axios
         .post(
-          `http://${process.env.REACT_APP_API_URL}/api/patients/verify_email/`,
+          `${process.env.REACT_APP_API_URL}/users/verify_email/`,
           data,
           config
         )
@@ -73,9 +73,9 @@ const Verify = () => {
           status = response.status;
           console.log(status);
           if (status === 200) {
-            var patient_token = data["token"];
-            localStorage.setItem("patient_token", patient_token);
-            navigate("/manageappointment");
+            var ds_token = data["token"];
+            localStorage.setItem("ds_token", ds_token);
+            navigate("/input");
           } else {
             console.log("incorrect otp");
             toast.warn("Incorrect OTP!", {

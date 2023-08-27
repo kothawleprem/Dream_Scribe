@@ -27,8 +27,7 @@ const Email = () => {
     });
   };
 
-  
-  console.log(process.env.REACT_APP_API_URL);
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -56,12 +55,11 @@ const Email = () => {
       };
 
       console.log(data,config)
-
-      console.log(process.env.REACT_APP_API_URL);
+      console.log(`http://${process.env.REACT_APP_API_URL}/users/email/`);
 
       axios
         .post(
-          `http://${process.env.REACT_APP_API_URL}/api/patients/email/`,
+          `${process.env.REACT_APP_API_URL}/users/email/`,
           data,
           config
         )

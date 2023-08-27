@@ -78,14 +78,14 @@ WSGI_APPLICATION = 'server.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-REST_FRAMEWORK = {
-    # 'DEFAULT_PERMISSION_CLASSES': [
-    #     'rest_framework.permissions.IsAdminUser',
-    # ],
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.TokenAuthentication',
-    ],
-}
+# REST_FRAMEWORK = {
+#     # 'DEFAULT_PERMISSION_CLASSES': [
+#     #     'rest_framework.permissions.IsAdminUser',
+#     # ],
+#     'DEFAULT_AUTHENTICATION_CLASSES': [
+#         'rest_framework.authentication.TokenAuthentication',
+#     ],
+# }
 
 
 DATABASES = {
