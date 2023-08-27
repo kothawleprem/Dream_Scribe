@@ -1,0 +1,53 @@
+.main-btn-email {
+    display: inline-block;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 1px solid #fe7865;
+    padding: 0 35px;
+    font-size: 16px;
+    line-height: 48px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 5;
+    -webkit-transition: all 0.4s ease-out 0s;
+    -moz-transition: all 0.4s ease-out 0s;
+    -ms-transition: all 0.4s ease-out 0s;
+    -o-transition: all 0.4s ease-out 0s;
+    transition: all 0.4s ease-out 0s;
+    background-color: #fe7865;
+    border-radius: 10px;
+    width: 325px;
+  }
+  @media (max-width: 767px) {
+    .main-btn-email {
+      font-size: 14px;
+      padding: 0 25px;
+      line-height: 43px;
+    }
+  }
+  .main-btn-email i {
+    font-size: 12px;
+    margin-left: 5px;
+  }
+  .main-btn-email:hover {
+    background-color: #fff;
+    color: #fe7865;
+    border-color: #fe7865;
+  }
+  .main-btn-email.main-btn-2 {
+    background-color: #fff;
+    color: #fe7865;
+    border-color: #fe7865;
+  }
+  .main-btn-email.main-btn-2:hover {
+    background-color: #fe7865;
+    border-color: #fe7865;
+    color: #fff;
+  }
+  
+  .loti-img {
+    height: "80%";
+    width: "80%";
+  }
