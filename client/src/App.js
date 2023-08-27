@@ -5,7 +5,9 @@ import {  Routes, Route } from "react-router-dom";
 import Home from './Screens/Home';
 import Email from './Screens/Onboading/Email';
 import Verify from './Screens/Onboading/Verify';
-
+import Input from './Pages/Input/Input';
+import Options from './Pages/Options/Options';
+import Poem from './Pages/Poem/Poem';
 
 function App() {
   return (
@@ -17,6 +19,9 @@ function App() {
                 <Route exact path='/home' element={<  Home/>}></Route>
                 <Route exact path='/email' element={<  Email/>}></Route>
                 <Route exact path='/verify' element={<  Verify/>}></Route>
+                <Route exact path="/input" element={<Input/>}></Route>
+                <Route exact path="/options" element={<Options/>}></Route>
+                <Route exact path="/poem" element={<Poem/>}></Route>
         </Routes>
     
 
