@@ -20,6 +20,7 @@
     background-color: #4a2ff7;
     border-radius: 10px;
     width: 155px;
+
   }
 
 
@@ -30,9 +31,10 @@
       line-height: 43px;
     }
   }
+ 
   .main-btn-comon i {
-    font-size: 12px;
-    margin-left: 5px;
+    font-size: 18px; /* Increase the icon size */
+    margin-left: 8px; /* Add some spacing between text and icon */
   }
   .main-btn-comon:hover {
     background-color: #fff;

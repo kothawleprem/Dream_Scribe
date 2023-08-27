@@ -3,6 +3,8 @@ import { Container, Button, Form } from "react-bootstrap";
 import { useLocation, useNavigate } from "react-router-dom";
 import NavbarComan from "../../Component/NavbarComan";
 import "./Options.css"
+import { BiBookOpen, BiChart, BiCameraMovie } from "react-icons/bi"; // Import icons
+
 
 const Options = () => {
   const { state } = useLocation();
@@ -47,8 +49,8 @@ const Options = () => {
             })
           }
         >
-          Poem
-        </Button>
+            Poem <BiBookOpen className="ml-2 text-2xl" />
+    </Button>
         <Button
           // variant="outline-primary"
           className="main-btn-comon ml-4"
@@ -60,10 +62,10 @@ const Options = () => {
             })
           }
         >
-          Analyze
+        <BiChart className="mr-2" />  Analyze
         </Button>
         <Button
-          variant="outline-primary"
+          className="main-btn-comon ml-4"
           onClick={() =>
             navigate("/movie", {
               state: {
@@ -72,7 +74,7 @@ const Options = () => {
             })
           }
         >
-          Movie
+        <BiCameraMovie className="mr-2" />   Movie
         </Button>
       </center>
     </Container>
