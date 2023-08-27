@@ -21,7 +21,8 @@
     width: 325px;
   }
 
-  
+
+
   @media (max-width: 767px) {
     .main-btn-email {
       font-size: 14px;
@@ -47,9 +48,4 @@
     background-color: #4a2ff7;
     border-color: #4a2ff7;
     color: #fff;
-  }
-  
-  .loti-img {
-    height: "80%";
-    width: "80%";
   }

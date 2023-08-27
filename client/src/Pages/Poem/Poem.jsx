@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import { Container, Button } from "react-bootstrap"
+import { Container, Button ,Form} from "react-bootstrap"
 import { useLocation, useNavigate } from "react-router-dom";
+import NavbarComan from '../../Component/NavbarComan';
 
 const Poem = () => {
     const { state } = useLocation();
     const navigate = useNavigate();
     const [poemData, setPoemData] = useState("")
+    const [editablePoem, setEditablePoem] = useState("");
+
     
    useEffect(() => {
      (async () => {
@@ -52,6 +55,14 @@ const Poem = () => {
      })();
    }, [state.dreamDescription]);
 
+   const handleEditablePoemChange = (e) => {
+    setEditablePoem(e.target.value);
+  };
+
+  const handleSave = () => {
+
+  };
+
 
     const paragraphs = poemData.split("\n\n").map((paragraph, index) => (
       <p key={index}>
@@ -64,10 +75,32 @@ const Poem = () => {
       </p>
     ));
   return (
+    <> 
+    <NavbarComan/>
+    <div style={{ backgroundImage: 'linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%)', minHeight: '100vh', padding: '2rem' }}>
+    <center  > 
+    <p className="py-1 text-xl font-bold leading-normal text-gray-600 lg:text-xl xl:text-4xl">
+          Your dream to Poem
+            </p>
     <Container>
-      <div>{paragraphs}</div>
-      <Button>Save</Button>
-    </Container>
+    <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div className=" mb-4">
+    <div className="poem-preview">
+      {paragraphs}
+    </div>
+      <Button
+        className="main-btn-comon"
+        onClick={handleSave}
+      >
+        Save
+      </Button>
+    </div>
+    </div>
+
+  </Container>
+  </center>
+  </div> 
+  </>
   );
 }
 
