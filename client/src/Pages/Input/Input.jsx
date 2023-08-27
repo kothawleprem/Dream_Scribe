@@ -2,9 +2,12 @@ import React, { useState } from 'react'
 import { Container, Form, InputGroup, Button } from "react-bootstrap"
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
+import NavbarComan from '../../Component/NavbarComan';
 
 const Input = () => {
     const [dream, setDream] = useState(undefined);
+    const [inputType, setInputType] = useState('dream'); // Added inputType state
+
     const [dreamDescription, setDreamDescription] = useState(undefined
         )
 
@@ -136,33 +139,59 @@ const Input = () => {
         console.error("Fetch error:", error);
       }
     };
-
+    const toggleInputType = () => {
+      setInputType(inputType === 'dream' ? 'description' : 'dream');
+    };
+  
 
 
 
 
   return (
-    <Container>
-      <center>
-        <h3>Enter your Dream and we will expand it!</h3>
-        <p>Please limit to 50 words.</p>
-        <InputGroup>
-          <Form.Control
-            as="textarea"
-            aria-label="With textarea"
-            onChange={handleDreamChange}
-          />
-          <Button onClick={handleInputDream}>✨</Button>
-        </InputGroup>
-        <h2>OR</h2>
-        <h3>Enter your Dream's description!</h3>
-        <p>Please limit to 150 words.</p>
-        <InputGroup>
-          <Form.Control as="textarea" aria-label="With textarea" rows="7" />
-          <Button>✨</Button>
-        </InputGroup>
-      </center>
-    </Container>
+    <>
+       <NavbarComan />
+      <div className="bg-gray-100 min-h-screen py-16">
+        <div className="container mx-auto">
+          <div className="text-center mb-8">
+            <button
+              className={`bg-blue-500 text-white px-4 py-2 rounded-full focus:outline-none ${
+                inputType === 'dream' ? 'bg-opacity-100' : 'bg-opacity-50'
+              }`}
+              onClick={() => setInputType('dream')}
+            >
+              Enter Dream
+            </button>
+
+            <button
+              className={`bg-blue-500 text-white px-4 ml-4 py-2 rounded-full focus:outline-none ${
+                inputType === 'description' ? 'bg-opacity-100' : 'bg-opacity-50'
+              }`}
+              onClick={() => setInputType('description')}
+            >
+              Enter Dream's Description
+            </button>
+            <h3 className="text-3xl font-semibold mt-4">
+              Enter your {inputType === 'dream' ? 'Dream' : 'Dream Description'} and we will expand it!
+            </h3>
+            <p className="text-gray-600">Please limit to {inputType === 'dream' ? '50 words' : '150 words'}.</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <textarea
+              className="w-full max-w-md px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
+              placeholder={`Enter your ${inputType === 'dream' ? 'dream' : 'dream\'s description'}...`}
+              rows={inputType === 'dream' ? 3 : 5}
+              onChange={handleDreamChange}
+            ></textarea>
+            <button
+              className="mt-4 px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none"
+              onClick={handleInputDream}
+            >
+              ✨ Expand
+            </button>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 
