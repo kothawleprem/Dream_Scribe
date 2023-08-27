@@ -15,6 +15,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import axios from "axios";
 import NavbarComan from '../../Component/NavbarComan';
+import Nav from '../../Component/Nav';
 
 const Verify = () => {
   const { state } = useLocation();
@@ -101,7 +102,7 @@ const Verify = () => {
 
   return (
     <>
-    <NavbarComan/>
+    <Nav/>
       <Container>
         <br />
         <Row className="d-flex align-items-center justify-content-center">
