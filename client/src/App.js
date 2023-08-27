@@ -9,6 +9,7 @@ import Input from './Pages/Input/Input';
 import Options from './Pages/Options/Options';
 import Poem from './Pages/Poem/Poem';
 import Analyze from './Pages/Analyze/Analyze';
+import Movie from './Pages/Movie/Movie';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
                 <Route exact path="/options" element={<Options/>}></Route>
                 <Route exact path="/poem" element={<Poem/>}></Route>
                 <Route exact path='/analyze' element={<Analyze/>}></Route>
+                <Route exact path='/movie' element={<Movie/>}></Route>
         </Routes>
     
 

@@ -43,6 +43,18 @@ const Options = () => {
         >
           Analyze
         </Button>
+        <Button
+          variant="outline-primary"
+          onClick={() =>
+            navigate("/movie", {
+              state: {
+                dreamDescription: state.dreamDescription,
+              },
+            })
+          }
+        >
+          Movie
+        </Button>
       </center>
     </Container>
   );
