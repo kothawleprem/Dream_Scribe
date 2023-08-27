@@ -14,7 +14,7 @@ const Hero = () => {
 >
             DreamScribe:AI-Powered Dream Content Creation
             </h1>
-            <p className="py-5 text-xl leading-normal text-gray-500 lg:text-xl xl:text-2xl dark:text-gray-300">
+            <p className="py-5 text-xl leading-normal text-gray-500 lg:text-xl xl:text-2xl">
             Transform your dream experiences into captivating narratives, stories, and more.
             </p>
 
@@ -22,7 +22,7 @@ const Hero = () => {
               <Link
                 to="/email"
                 rel="noopener"
-                className="px-8 py-4  text-lg font-bold text-center text-white bg-indigo-600 rounded-md ">
+                className="px-12 py-3  text-lg font-bold text-center text-white no-underline bg-indigo-600 rounded-md ">
                 Get start
               </Link>
               

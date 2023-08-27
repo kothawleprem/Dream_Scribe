@@ -3,15 +3,18 @@ import { useNavigate, useLocation, Link } from "react-router-dom";
 import { useState } from "react";
 
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
-// import Lottie from "lottie-react";
-// import otpLottie from "../../lotties/otp.json";
+
 import { MuiOtpInput } from "mui-one-time-password-input";
 
 import { ToastContainer, toast } from "react-toastify";
 
 import "./Email.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 
 import axios from "axios";
+import NavbarComan from '../../Component/NavbarComan';
 
 const Verify = () => {
   const { state } = useLocation();
@@ -98,6 +101,7 @@ const Verify = () => {
 
   return (
     <>
+    <NavbarComan/>
       <Container>
         <br />
         <Row className="d-flex align-items-center justify-content-center">
@@ -115,7 +119,7 @@ const Verify = () => {
             </Form>
           </Col>
           <Col xs={12} lg={5} md={6}>
-            {/* <Lottie animationData={otpLottie} width="50%" height="50%" /> */}
+          <img src="https://img.freepik.com/free-vector/mobile-login-concept-illustration_114360-83.jpg?w=740&t=st=1693134346~exp=1693134946~hmac=716eeaf1f20cac584562c2c8c591af225f9139a0527bd0d23b07301b02914ce7" />
           </Col>
         </Row>
       </Container>

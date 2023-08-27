@@ -4,7 +4,7 @@
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
-    border: 1px solid #fe7865;
+    border: 1px solid #4a2ff7;
     padding: 0 35px;
     font-size: 16px;
     line-height: 48px;
@@ -16,7 +16,7 @@
     -ms-transition: all 0.4s ease-out 0s;
     -o-transition: all 0.4s ease-out 0s;
     transition: all 0.4s ease-out 0s;
-    background-color: #fe7865;
+    background-color: #4a2ff7;
     border-radius: 10px;
     width: 325px;
   }
@@ -33,17 +33,17 @@
   }
   .main-btn-email:hover {
     background-color: #fff;
-    color: #fe7865;
-    border-color: #fe7865;
+    color: #4a2ff7;
+    border-color: #4a2ff7;
   }
   .main-btn-email.main-btn-2 {
     background-color: #fff;
-    color: #fe7865;
-    border-color: #fe7865;
+    color: #4a2ff7;
+    border-color: #4a2ff7;
   }
   .main-btn-email.main-btn-2:hover {
-    background-color: #fe7865;
-    border-color: #fe7865;
+    background-color: #4a2ff7;
+    border-color: #4a2ff7;
     color: #fff;
   }
   

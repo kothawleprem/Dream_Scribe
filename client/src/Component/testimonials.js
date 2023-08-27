@@ -8,7 +8,7 @@ const Testimonials  = () => {
     <Container>
       <div className="grid gap-10 lg:grid-cols-2 xl:grid-cols-3">
         <div className="lg:col-span-2 xl:col-auto">
-          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
+          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14">
             <p className="text-2xl leading-normal ">
               Dream Entry:
 Users can record their <Mark>dream descriptions   </Mark> 
@@ -19,7 +19,7 @@ Users can record their <Mark>dream descriptions   </Mark>
           </div>
         </div>
         <div className="">
-          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
+          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 ">
             <p className="text-2xl leading-normal ">
 
               <Mark>AI-Powered Dream Expansion:</Mark>
@@ -31,7 +31,7 @@ infusing them with intricate details and emotions.
           </div>
         </div>
         <div className="">
-          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
+          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 ">
             <p className="text-2xl leading-normal ">
          
             <Mark> Character Extraction</Mark>
@@ -61,7 +61,7 @@ function Avatar(props) {
       </div>
       <div>
         <div className="text-lg font-medium">{props.name}</div>
-        <div className="text-gray-600 dark:text-gray-400">{props.title}</div>
+        <div className="text-gray-600">{props.title}</div>
       </div>
     </div>
   );
@@ -71,7 +71,7 @@ function Mark(props) {
   return (
     <>
       {" "}
-      <mark className="text-indigo-800 bg-indigo-100 rounded-md ring-indigo-100 ring-4 dark:ring-indigo-900 dark:bg-indigo-900 dark:text-indigo-200">
+      <mark className="text-indigo-800 bg-indigo-100 rounded-md ring-indigo-100 ring-4">
         {props.children}
       </mark>{" "}
     </>
