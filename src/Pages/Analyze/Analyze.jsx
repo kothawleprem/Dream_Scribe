@@ -92,7 +92,7 @@ const Analyze = () => {
         <Container>
           <center>
             <div class="max-w-5xl p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-              {analyzeData !== undefined ? (
+              {analyzeData.length > 2 ? (
                 <>
                   <div>{paragraphs}</div>
                   <br />

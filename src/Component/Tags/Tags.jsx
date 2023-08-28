@@ -53,7 +53,15 @@ const Tags = () => {
         const rawData = responseData.results[0].outputs[3].data.text.raw;
         // const sections = rawData.split("\n\n");
         // console.log(sections);
-        setTagsData(rawData);
+        const semicolonIndex = rawData.indexOf(":");
+
+        if (semicolonIndex !== -1) {
+          const restPart = rawData.substring(semicolonIndex + 1).trim();
+          setTagsData(restPart);
+        } else {
+          setTagsData(rawData);
+          console.log("Semicolon not found in the message.");
+        }
       } catch (error) {
         toast.error(" An error occure while fetching Tags from the AI!", {
           position: "top-right",

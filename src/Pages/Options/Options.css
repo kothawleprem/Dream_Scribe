@@ -69,7 +69,6 @@
   cursor: pointer;
   z-index: 5;
   transition: all 0.4s ease-out 0s;
-  background-color: #4a2ff7;
   border-radius: 10px;
   width: 155px;
 }
@@ -80,7 +79,7 @@
 }
 
 .new-btn:hover {
-  background-color: #fff;
+  background-color: #ffffff00;
   color: #4a2ff7;
   border-color: #4a2ff7;
 }
@@ -92,7 +91,7 @@
 }
 
 .new-btn.new-btn-2:hover {
-  background-color: #4a2ff7;
+  background-color: #ffffff00;
   border-color: #4a2ff7;
   color: #fff;
 }

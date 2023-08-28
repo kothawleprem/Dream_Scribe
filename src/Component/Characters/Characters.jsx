@@ -52,7 +52,16 @@ const Characters = () => {
         const rawData = responseData.results[0].outputs[1].data.text.raw;
         // const sections = rawData.split("\n\n");
         // console.log(sections);
-        setCharacterData(rawData);
+        const semicolonIndex = rawData.indexOf(":");
+
+        if (semicolonIndex !== -1) {
+          const restPart = rawData.substring(semicolonIndex + 1).trim();
+          setCharacterData(restPart);
+        } else {
+          setCharacterData(rawData);
+          console.log("Semicolon not found in the message.");
+        }
+        
       } catch (error) {
         toast.error(" An error occure while fetching characters from the AI!", {
           position: "top-right",
