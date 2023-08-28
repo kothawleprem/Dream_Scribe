@@ -42,7 +42,7 @@ const Navbar = () => {
         </Disclosure>
 
         {/* menu  */}
-        <div className="hidden text-center lg:flex lg:items-center">
+        {/* <div className="hidden text-center lg:flex lg:items-center">
           <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
             {navigation.map((menu, index) => (
               <li className="mr-3 nav__item" key={index}>
@@ -52,7 +52,7 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-        </div>
+        </div> */}
 
         <div className="hidden mr-3 space-x-4 lg:flex nav__item">
           <Link to="/input" className="px-6 font-bold py-2 text-white no-underline bg-indigo-600 rounded-md md:ml-5">

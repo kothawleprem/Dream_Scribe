@@ -40,17 +40,17 @@ const faqdata = [
   },
   {
     question: "How does DreamScribe work?",
-    answer: "DreamScribe uses advanced AI models to expand and enrich your dream descriptions. You can then modify and personalize the AI-generated content to create unique stories and art.    ",
+    answer: "DreamScribe uses advanced AI models to expand and enrich your dream descriptions. You can then modify and personalize the AI-generated content to create unique stories.  ",
   },
   {
     question: "What types of content can I create?",
     answer:
-      "With DreamScribe, you can create various forms of content, including short stories, movie scripts, poems, and visual art, all inspired by your dreams. ",
+      "With DreamScribe, you can create various forms of content, including short stories, movie scripts, poems, all inspired by your dreams. ",
   },
   {
     question: "How do I get started on DreamScribe? ",
     answer:
-      "To get started, sign up for an account on our platform, record your dream descriptions, and let AI and your creativity do the rest.  ",
+      "To get started, just enter your dream, and let AI and your creativity do the rest.  ",
   },
 ];
 

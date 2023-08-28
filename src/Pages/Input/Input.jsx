@@ -9,6 +9,7 @@ import { ToastContainer, toast } from "react-toastify";
 const Input = () => {
     const [dream, setDream] = useState(undefined);
     const [inputType, setInputType] = useState('dream'); // Added inputType state
+    const [isLoading, setIsLoading] = useState(false)
 
     const [dreamDescription, setDreamDescription] = useState(undefined)
 
@@ -27,6 +28,7 @@ const Input = () => {
         console.log("Dream is empty");
         return;
       }
+      setIsLoading(true)
 
       const url = `${process.env.REACT_APP_C_BASE_URL}/v2/users/${process.env.REACT_APP_USER_ID}/apps/dreamscribe/workflows/workflow-76e29b/results`;
 
@@ -81,6 +83,7 @@ const Input = () => {
           progress: undefined,
           theme: "light",
         });
+        setIsLoading(false)
         console.error("Fetch error:", error);
       }
     };
@@ -156,14 +159,22 @@ const Input = () => {
               }
             ></textarea>
             <button
-              className="main-btn-comon mt-4"
+              className="main-btn-comon mt-6"
               onClick={
                 inputType === "dream"
                   ? handleInputDream
                   : handleInputDreamDescription
               }
             >
-              {inputType === "dream" ? "✨ Expand" : "Go"}
+              {isLoading ? (
+                <>
+                  <Spinner animation="border" variant="light" size="sm" />
+                  &nbsp;
+                  {inputType === "dream" ? "✨ Expanding ..." : "Go"}
+                </>
+              ) : (
+                <>{inputType === "dream" ? "✨ Expand" : "Go"}</>
+              )}
             </button>
 
             {/* <AudioInputComponent/> */}

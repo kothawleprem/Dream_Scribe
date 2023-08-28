@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
-import Container from "./container";
+// import Container from "./container";
+import { Container } from "react-bootstrap";
+
 
 const Hero = () => {
   const imageUrl = 'https://img.freepik.com/free-vector/man-workplace-thinking-about-sailing-yacht-imagines-future-rest_575670-279.jpg?w=740&t=st=1693073065~exp=1693073665~hmac=76366646a96c9191e6744c8388a16eb8529b7a8b14b22073ba9bee9d749ef8af';
@@ -23,7 +25,7 @@ const Hero = () => {
                 to="/input"
                 rel="noopener"
                 className="px-12 py-3  text-lg font-bold text-center text-white no-underline bg-indigo-600 rounded-md ">
-                Get start
+                Get started
               </Link>
               
             </div>

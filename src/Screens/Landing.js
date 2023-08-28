@@ -30,8 +30,6 @@ DreamScribe is an AI-powered platform that transforms your dreams into stories a
      
       <Testimonials />
       <SectionTitle pretitle="FAQ" title="Frequently Asked Questions">
-        Answer your customers possible questions here, it will increase the
-        conversion rate as well as support or chat requests.
       </SectionTitle>
       <Faq />
       <Footer />
