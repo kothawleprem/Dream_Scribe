@@ -3,6 +3,7 @@ import { Container, Form, InputGroup, Button, Spinner } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import NavbarComan from '../../Component/NavbarComan';
+import AudioInputComponent from '../audio';
 
 const Input = () => {
     const [dream, setDream] = useState(undefined);
@@ -142,6 +143,16 @@ const Input = () => {
     };
   
 
+  const handleInputDreamDescription = async () => {
+    if (!dream) {
+      console.log('Dream description is empty');
+      return;
+    }
+
+    ////
+  };
+
+
 
 
 
@@ -179,16 +190,26 @@ const Input = () => {
               className="w-full max-w-md px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
               placeholder={`Enter your ${inputType === 'dream' ? 'dream' : 'dream\'s description'}...`}
               rows={inputType === 'dream' ? 3 : 5}
-              onChange={handleDreamChange}
+              // onChange={handleDreamChange}
+              onChange={
+                inputType === 'dream'
+                  ? handleDreamChange
+                  : handlDreamDescriptionChange
+              }
+
             ></textarea>
             <button
-              // className="mt-4 px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none"
-              className="main-btn-comon mt-4 "
-
-              onClick={handleInputDream}
+              className="main-btn-comon mt-4"
+              onClick={
+                inputType === 'dream'
+                  ? handleInputDream
+                  : handleInputDreamDescription
+              }
             >
-              ✨ Expand
+              {inputType === 'dream' ? '✨ Expand' : 'Go'}
             </button>
+
+            <AudioInputComponent/>
           </div>
         </div>
       </div>
