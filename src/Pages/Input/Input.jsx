@@ -192,7 +192,13 @@ const Input = () => {
               className="w-full max-w-md px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
               placeholder={`Enter your ${inputType === 'dream' ? 'dream' : 'dream\'s description'}...`}
               rows={inputType === 'dream' ? 3 : 5}
-              onChange={handleDreamChange}
+              // onChange={handleDreamChange}
+              onChange={
+                inputType === 'dream'
+                  ? handleDreamChange
+                  : handlDreamDescriptionChange
+              }
+
             ></textarea>
             <button
               className="main-btn-comon mt-4"
