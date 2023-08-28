@@ -29,7 +29,7 @@ const NavbarComan = () => {
                         className="w-8"
                       /> */}
                     </span>
-                    <span>DreamScribe Ai</span>
+                    <span>DreamScribe AI</span>
                   </span>
                 </Link>
 
@@ -54,12 +54,12 @@ const NavbarComan = () => {
           </ul>
         </div> */}
 
-        <div className="hidden mr-3 space-x-4 lg:flex nav__item">
+        {/* <div className="hidden mr-3 space-x-4 lg:flex nav__item">
           <Link to="/mydream" className="px-6 font-bold py-2  text-gray-600 no-underline rounded-md md:ml-5 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none">
        My Dreams
           </Link>
 
-        </div>
+        </div> */}
       </nav>
     </div>
   );

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import NavbarComan from "../../Component/NavbarComan";
 import { useLocation } from "react-router-dom";
 import { Container, Spinner } from "react-bootstrap";
+import { ToastContainer, toast } from "react-toastify";
 
 const Tags = () => {
   const [tagsData, setTagsData] = useState(undefined);
@@ -54,6 +55,17 @@ const Tags = () => {
         // console.log(sections);
         setTagsData(rawData);
       } catch (error) {
+        toast.error(" An error occure while fetching Tags from the AI!", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        console.error("Fetch error:", error);
         console.error("Fetch error:", error);
       }
     })();
@@ -61,7 +73,7 @@ const Tags = () => {
 
   return (
     <>
-      <div className=" bg-gradient-to-br from-slate-50 to-blue-100 min-h-screen py-16">
+
         <center>
           <p className="py-1 text-xl font-bold leading-normal text-gray-600 lg:text-xl xl:text-4xl">
             Tags
@@ -85,7 +97,7 @@ const Tags = () => {
             </div>
           </Container>
         </center>
-      </div>
+      <ToastContainer />
     </>
   );
 };

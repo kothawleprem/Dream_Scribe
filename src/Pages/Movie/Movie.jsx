@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import NavbarComan from '../../Component/NavbarComan';
 import { useLocation } from 'react-router-dom';
-import { Container } from 'react-bootstrap';
+import { Container, Spinner } from "react-bootstrap";
+import { ToastContainer, toast } from "react-toastify";
 
 const Movie = () => {
   // const [ partsRawData, setPartsRawData] = useState("");
@@ -54,6 +55,16 @@ const Movie = () => {
         // console.log(sections);
         setAccordionData(rawData);
       } catch (error) {
+        toast.error(" An error occure while fetching movie data from the AI!", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
         console.error("Fetch error:", error);
       }
     })();
@@ -72,7 +83,7 @@ const Movie = () => {
   return (
     <>
       <NavbarComan />
-      {accordionData.length !== 0 ? (
+
         <>
           <div className=" bg-gradient-to-br from-slate-50 to-blue-100 min-h-screen py-16">
             <center>
@@ -82,16 +93,25 @@ const Movie = () => {
               <Container>
                 <div class="max-w-lg p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                   <div className=" mb-4">
-                    <div className="poem-preview">{paragraphs}</div>
+                    {accordionData.length !== 0 ? (
+                      <>
+                        <div className="poem-preview">{paragraphs}</div>
+                      </>
+                    ) : (
+                      <>
+                        <center>
+                          <Spinner animation="grow" />
+                          Loading Script Data...
+                        </center>
+                      </>
+                    )}
                   </div>
                 </div>
               </Container>
             </center>
           </div>
         </>
-      ) : (
-        <></>
-      )}
+      <ToastContainer />
     </>
   );
 };

@@ -4,6 +4,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import NavbarComan from "../../Component/NavbarComan";
 import Tags from "../../Component/Tags/Tags";
 import Characters from "../../Component/Characters/Characters";
+import { ToastContainer, toast } from "react-toastify";
 
 const Analyze = () => {
   const { state } = useLocation();
@@ -50,6 +51,17 @@ const Analyze = () => {
         
         setAnalyzeData(rawData);
       } catch (error) {
+        toast.error(" An error occure while fetching analysis from the AI!", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        console.error("Fetch error:", error);
         console.error("Fetch error:", error);
       }
     })();
@@ -95,10 +107,13 @@ const Analyze = () => {
               )}
             </div>
           </center>
+          <br />
           <Tags />
+          <br />
           <Characters />
         </Container>
       </div>
+      <ToastContainer />
     </>
   );
 }

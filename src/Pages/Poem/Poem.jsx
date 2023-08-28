@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Container, Button, Form, Spinner } from "react-bootstrap";
 import { useLocation, useNavigate } from "react-router-dom";
 import NavbarComan from '../../Component/NavbarComan';
+import { ToastContainer, toast } from "react-toastify";
 
 const Poem = () => {
     const { state } = useLocation();
@@ -50,10 +51,21 @@ const Poem = () => {
          const rawData = responseData.results[0].outputs[1].data.text.raw;
          setPoemData(rawData);
        } catch (error) {
+        toast.error(" An error occure while fetching Poem from the AI!", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        console.error("Fetch error:", error);
          console.error("Fetch error:", error);
        }
      })();
-   }, [state.dreamDescription]);
+   }, []);
 
    const handleEditablePoemChange = (e) => {
     setEditablePoem(e.target.value);
@@ -102,6 +114,7 @@ const Poem = () => {
           </Container>
         </center>
       </div>
+      <ToastContainer />
     </>
   );
 }
