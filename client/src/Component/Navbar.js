@@ -55,7 +55,7 @@ const Navbar = () => {
         </div>
 
         <div className="hidden mr-3 space-x-4 lg:flex nav__item">
-          <Link to="/email" className="px-6 font-bold py-2 text-white no-underline bg-indigo-600 rounded-md md:ml-5">
+          <Link to="/input" className="px-6 font-bold py-2 text-white no-underline bg-indigo-600 rounded-md md:ml-5">
               Get Started
           </Link>
 

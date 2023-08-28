@@ -20,7 +20,7 @@ const Hero = () => {
 
             <div className="flex flex-col items-start space-y-3 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row">
               <Link
-                to="/email"
+                to="/input"
                 rel="noopener"
                 className="px-12 py-3  text-lg font-bold text-center text-white no-underline bg-indigo-600 rounded-md ">
                 Get start

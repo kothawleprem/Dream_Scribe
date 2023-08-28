@@ -150,27 +150,28 @@ const Input = () => {
   return (
     <>
        <NavbarComan />
-      <div className="bg-gray-100 min-h-screen py-16">
+      <div className=" bg-gradient-to-br from-slate-50 to-blue-100 min-h-screen py-16">
         <div className="container mx-auto">
           <div className="text-center mb-8">
             <button
-              className={`bg-blue-500 text-white px-4 py-2 rounded-full focus:outline-none ${
+              className={`bg-indigo-600 text-white  font-bold px-8 py-2 rounded-full focus:outline-none ${
                 inputType === 'dream' ? 'bg-opacity-100' : 'bg-opacity-50'
               }`}
+             
               onClick={() => setInputType('dream')}
             >
               Enter Dream
             </button>
 
             <button
-              className={`bg-blue-500 text-white px-4 ml-4 py-2 rounded-full focus:outline-none ${
+              className={`bg-indigo-600 text-white font-bold px-4 ml-4 py-2 rounded-full focus:outline-none ${
                 inputType === 'description' ? 'bg-opacity-100' : 'bg-opacity-50'
               }`}
               onClick={() => setInputType('description')}
             >
               Enter Dream's Description
             </button>
-            <h3 className="text-3xl font-semibold mt-4">
+            <h3 className="text-3xl   font-bold text-gray-600  mt-4">
               Enter your {inputType === 'dream' ? 'Dream' : 'Dream Description'} and we will expand it!
             </h3>
             <p className="text-gray-600">Please limit to {inputType === 'dream' ? '50 words' : '150 words'}.</p>

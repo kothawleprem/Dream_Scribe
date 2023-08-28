@@ -68,6 +68,7 @@ const Analyze = () => {
   return (
     <>  
    <NavbarComan/>
+   <div className=" bg-gradient-to-br from-slate-50 to-blue-100 min-h-screen py-16">
    <center> 
    <p className="py-1 text-xl font-bold leading-normal text-gray-600 lg:text-xl xl:text-4xl">
           Analysis of your dream
@@ -93,6 +94,7 @@ const Analyze = () => {
       </div>
       </center>
     </Container>
+    </div>
     
     </>
   );

@@ -92,7 +92,7 @@ const Movie = () => {
   return (
     <> 
     <NavbarComan/>
-    <div className="bg-gray-100 min-h-screen p-8">
+    <div className=" bg-gradient-to-br from-slate-50 to-blue-100 min-h-screen py-16">
       <div className="max-w-3xl mx-auto">
         <h1 className="text-3xl font-bold mb-4">Movie Stories</h1>
         {accordionData.length !== 0 &&

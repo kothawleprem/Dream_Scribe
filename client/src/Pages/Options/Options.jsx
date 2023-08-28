@@ -27,9 +27,11 @@ const Options = () => {
   return (
     <>  
     <NavbarComan/>
+    <div className=" bg-gradient-to-br from-slate-50 to-blue-100 min-h-screen py-16">
+
     <Container>
       <center>
-      <p className="py-8 text-xl leading-normal text-gray-600 lg:text-xl xl:text-3xl">
+      <p className="py-8 text-xl leading-normal font-bold text-gray-600 lg:text-xl xl:text-3xl">
             Transform your dream experiences into captivating narratives, stories, and more.
             </p>
         <Form.Control
@@ -39,8 +41,10 @@ const Options = () => {
           rows={6}
           className="mb-3"
         />
+                  <div className="button-container">
+
         <Button
-          className="main-btn-comon"
+          className="new-btn"
           onClick={() =>
             navigate("/poem", {
               state: {
@@ -53,7 +57,7 @@ const Options = () => {
     </Button>
         <Button
           // variant="outline-primary"
-          className="main-btn-comon ml-4"
+          className="new-btn ml-4"
           onClick={() =>
             navigate("/analyze", {
               state: {
@@ -62,10 +66,11 @@ const Options = () => {
             })
           }
         >
-        <BiChart className="mr-2" />  Analyze
+            Analyze <BiChart className="ml-2 text-4xl" />
+
         </Button>
         <Button
-          className="main-btn-comon ml-4"
+          className="new-btn ml-4"
           onClick={() =>
             navigate("/movie", {
               state: {
@@ -74,10 +79,13 @@ const Options = () => {
             })
           }
         >
-        <BiCameraMovie className="mr-2" />   Movie
+           Movie <BiCameraMovie className="ml-2 text-2xl" />
+
         </Button>
+        </div>
       </center>
     </Container>
+    </div>
     </>
   );
 };
