@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Container, Button } from "react-bootstrap";
+import { Container, Button, Spinner } from "react-bootstrap";
 import { useLocation, useNavigate } from "react-router-dom";
 import NavbarComan from "../../Component/NavbarComan";
+import Tags from "../../Component/Tags/Tags";
+import Characters from "../../Component/Characters/Characters";
 
 const Analyze = () => {
   const { state } = useLocation();
@@ -51,7 +53,7 @@ const Analyze = () => {
         console.error("Fetch error:", error);
       }
     })();
-  }, [state.dreamDescription, analyzeData]);
+  }, []);
 
   const paragraphs = analyzeData.split("\n\n").map((paragraph, index) => (
     <p key={index}>
@@ -66,36 +68,37 @@ const Analyze = () => {
 
   
   return (
-    <>  
-   <NavbarComan/>
-   <div className=" bg-gradient-to-br from-slate-50 to-blue-100 min-h-screen py-16">
-   <center> 
-   <p className="py-1 text-xl font-bold leading-normal text-gray-600 lg:text-xl xl:text-4xl">
-          Analysis of your dream
-            </p>
-            </center>
-           
-        
-    <Container >
-    <center>  
-    <div class="max-w-5xl p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <>
+      <NavbarComan />
+      <div className=" bg-gradient-to-br from-slate-50 to-blue-100 min-h-screen py-16">
+        <center>
+          <p className="py-1 text-xl font-bold leading-normal text-gray-600 lg:text-xl xl:text-4xl">
+            Analysis of your dream
+          </p>
+        </center>
 
-      {analyzeData !== undefined ? (
-        <>
-          <div>{paragraphs}</div>
-          <br/>
-          <Button 
-           className="main-btn-comon"
-          >Save</Button>
-        </>
-      ) : (
-        <></>
-      )}
+        <Container>
+          <center>
+            <div class="max-w-5xl p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+              {analyzeData !== undefined ? (
+                <>
+                  <div>{paragraphs}</div>
+                  <br />
+                </>
+              ) : (
+                <>
+                  <center>
+                    <Spinner animation="grow" />
+                    Loading Analysis Data...
+                  </center>
+                </>
+              )}
+            </div>
+          </center>
+          <Tags />
+          <Characters />
+        </Container>
       </div>
-      </center>
-    </Container>
-    </div>
-    
     </>
   );
 }

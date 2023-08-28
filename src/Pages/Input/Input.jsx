@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Container, Form, InputGroup, Button } from "react-bootstrap"
+import { Container, Form, InputGroup, Button, Spinner } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import NavbarComan from '../../Component/NavbarComan';
@@ -8,8 +8,7 @@ const Input = () => {
     const [dream, setDream] = useState(undefined);
     const [inputType, setInputType] = useState('dream'); // Added inputType state
 
-    const [dreamDescription, setDreamDescription] = useState(undefined
-        )
+    const [dreamDescription, setDreamDescription] = useState(undefined)
 
     const navigate = useNavigate();
 
@@ -20,7 +19,6 @@ const Input = () => {
     const handlDreamDescriptionChange = (e) => {
         setDreamDescription(e.target.value)
     }
-    //     const data = {
     //       inputs: [
     //         {
     //           data: {
