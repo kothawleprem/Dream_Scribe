@@ -3,6 +3,7 @@ import { Container, Form, InputGroup, Button } from "react-bootstrap"
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import NavbarComan from '../../Component/NavbarComan';
+import AudioInputComponent from '../audio';
 
 const Input = () => {
     const [dream, setDream] = useState(undefined);
@@ -191,6 +192,8 @@ const Input = () => {
             >
               ✨ Expand
             </button>
+
+            <AudioInputComponent/>
           </div>
         </div>
       </div>
