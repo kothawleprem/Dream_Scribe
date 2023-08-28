@@ -145,6 +145,16 @@ const Input = () => {
     };
   
 
+  const handleInputDreamDescription = async () => {
+    if (!dream) {
+      console.log('Dream description is empty');
+      return;
+    }
+
+    ////
+  };
+
+
 
 
 
@@ -185,12 +195,14 @@ const Input = () => {
               onChange={handleDreamChange}
             ></textarea>
             <button
-              // className="mt-4 px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none"
-              className="main-btn-comon mt-4 "
-
-              onClick={handleInputDream}
+              className="main-btn-comon mt-4"
+              onClick={
+                inputType === 'dream'
+                  ? handleInputDream
+                  : handleInputDreamDescription
+              }
             >
-              ✨ Expand
+              {inputType === 'dream' ? '✨ Expand' : 'Go'}
             </button>
 
             <AudioInputComponent/>

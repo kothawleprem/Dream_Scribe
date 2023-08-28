@@ -11,6 +11,11 @@ function AudioInputComponent() {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
       setAudioStream(stream);
       setIsRecording(true);
+
+      // Stop recording after 1 minute (60,000 milliseconds)
+      setTimeout(() => {
+        stopAudioCapture();
+      }, 60000);
     } catch (error) {
       console.error('Error accessing microphone:', error);
     }
