@@ -133,8 +133,10 @@ const Input = () => {
               Enter Dream's Description
             </button>
             <h3 className="text-3xl   font-bold text-gray-600  mt-4">
-              Enter your {inputType === "dream" ? "Dream" : "Dream Description"}{" "}
-              and we will expand it!
+              Enter your{" "}
+              {inputType === "dream"
+                ? "Dream and we will expand it!"
+                : "Dream's Description"}
             </h3>
             <p className="text-gray-600">
               {" "}
